@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import random
 
@@ -41,7 +44,7 @@ def main():
     mensaje = ""
     try:
         palabra = ""
-        with open('listaPalabras.txt', 'r') as f:
+        with open('listaPalabras.txt', 'r', encoding="utf-8") as f:
             listaPalabras = f.readlines()
             palabra = random.choice(listaPalabras)
         maxErrores = random.randrange(3, 8)  # valores entre 3 y 7
